@@ -23,7 +23,7 @@
 Instead of a circuit board I just opted for the ugly wiring technique.  The case is on [Tinkercad](https://www.tinkercad.com/things/2L7K1vGAjS5-traininator), click the link or search for Traininator.  You can see below I have some standoff printed on the front and some plastic pieces that hold the power button, screen, and mini button held strong.  
 ![Traininator opened up](https://github.com/inators/Traininator/blob/c6cc4fd54a4e9cd1cd1765979c7a4b41e5b041de/img/Traininator_open.jpg?raw=true)
 ### Basic wiring instructions
-The only thing that really matters here is that the screen is connected to the proper i2c pins.  All of the switches and buttons can be on pretty much any other pin as long as you have some way of knowing what pin you use.  You'll see in my code where I define what pins are what that this is flexible.  Still go to geoffb's blog linked above if you want to see what pins he used.  We use all the same stuff except I use a different oled screen (same pinout) and I have an extra button to map.
+The only thing that really matters here is that the screen is connected to the proper i2c pins and whichever type of pot you use is wired to an one of the ADC pins.  All of the switches and buttons can be on pretty much any other pin as long as you have some way of knowing what pin you use.  You'll see in my code where I define what pins are what that this is flexible.  Still go to geoffb's blog linked above if you want to see what pins he used.  We use all the same stuff except I use a different oled screen (same pinout) and I have an extra button to map.
 
 All of the switches and buttons will have visual feedback on the display so if you mix up which button is which just use the display then change your button function order here:
 ```
@@ -42,4 +42,4 @@ The function button serves a few purposes.  There is a visual reminder on the sc
 - Click a fourth through eigth time to decide which functions the switches will control (more below).
 
 To select a loco you use the function button as described above then click the horn.  The throttle shuts off and the display changes.  When the forward / reverse switch is forward the digit you are editing will change.  Switch it to the neutral position to stop the changes then use the horn button to continue to the next digit.  The screen will say "ok" to confirm then move on to the next digit.
-Choosing a function is the same except you only have two digits that you need to choose.  You can change the function for any of the five switches.  Note the horn button is always function two unless you change it in the program.
+Choosing a function is the same except you only have two digits that you need to choose.  You can change the function for any of the five switches.  Note the horn button is always function two unless you change it in the program.         
