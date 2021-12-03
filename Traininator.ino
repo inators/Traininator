@@ -7,7 +7,7 @@
 #include <Adafruit_SSD1306.h> // Screen
 
 
-#include "config.h"
+#include "config.h"          
 // This houses two defines - #define SSID "<my ssid>" and #define PASSWORD "<my password>"
 
 // WIFI & JMRI Stuff
@@ -17,7 +17,7 @@ const char* host = "trainserver"; // ip address or hostname of the server
 const int port = 12090;
 String throttleName = "Traininator"; // Visible on JMRI
 String hostname = "Traininator"; // Hostname visible on your router
-int trainAddress = 2;
+int trainAddress = 3;
 WiFiClient trainServer;
 
 // OLED Stuff
@@ -114,7 +114,8 @@ void setup() {
     if (!trainServer.connect(host, port)) {
         display.println("FAIL!");
         display.display();
-        while (true);
+        delay(5000);
+        ESP.restart();
     }
     // All connected.  Reset display
     resetTheDisplay();
