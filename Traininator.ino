@@ -53,7 +53,7 @@ unsigned char buttonHistory[] = {0, 0, 0, 0, 0, 0, 0, 0, 0};
 // functions - Forward = 99, backward = 98, programming button = 97
 // I'm picking my switches to control 0,1,2,3,7,8 since 8 is mute and 7 is dim on my controller
 unsigned char trainFunction[] = {97, 99, 98, 0, 1, 3, 7, 8, 2}; // What functions do you want the buttons to turn on/off?
-unsigned char horn = 8; // Use the horn button for programming mode. Which of the buttonPins is the horn?
+unsigned char horn = 8; // Use the horn button for programming mode. Which of the buttonPins is the horn? (of the trainFunction numbers)
 char throttlePin = A0; //What the throttle is hooked up to.  A0 = GPIO36
 
 
